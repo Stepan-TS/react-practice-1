@@ -237,7 +237,7 @@ export const App = () => {
                         data-cy="ProductUser"
                         className={classNames(
                           'has-text-link',
-                          { 'has-text-danger': product.user.sex === 'f',
+                          { 'has-text-danger': product.user,
                             'is-active': active },
                         )}
                       >
