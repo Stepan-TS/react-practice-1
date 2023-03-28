@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 
 import './App.scss';
 
+import classNames from 'classnames';
 import usersFromServer from './api/users';
 import categoriesFromServer from './api/categories';
 import productsFromServer from './api/products';
-import classNames from 'classnames';
 
 const category = id => (categoriesFromServer.find(cat => cat.id === id));
 
@@ -224,6 +224,7 @@ export const App = () => {
                   visibleProducts.map(product => (
                     <tr
                       data-cy="Product"
+                      onClick={() => setActive(true)}
                     >
                       <td className="has-text-weight-bold" data-cy="ProductId">
                         {product.id}
